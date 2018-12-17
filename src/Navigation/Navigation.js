@@ -1,11 +1,13 @@
 import React from 'react'
 
+import './title.css'
 import './navigation.css'
 
 class Navigation extends React.Component {
     render() {
         return (
             <div className="section-nav-top">
+                {this.renderTitle()}
                 <div className="section-nav-top__toggle">
                     <div className="section-nav-top__toggle-link" >
                         <div className="section-nav-top__toggle-button"></div>
@@ -23,6 +25,14 @@ class Navigation extends React.Component {
                     </li>
                 </ul>
             </div >
+        )
+    }
+
+    renderTitle() {
+        return (
+            <div className="section-nav-top__title">
+                title
+            </div>
         )
     }
 }
