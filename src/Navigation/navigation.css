@@ -11,13 +11,13 @@
 
 .section-nav-top__logo {
     flex-grow: 1;
-    background-color: #e17055;
+    background-color: #2d67c4;
     flex-direction: row;
 }
 
 .section-nav-top__toggle {
     display: none;
-    background-color: #e17055;
+    background-color: #2d67c4;
 }
 
 .section-nav-top__toggle-button {
@@ -40,7 +40,7 @@
 
 .section-nav-top__item {
     flex-grow: 1;
-    background-color: #e17055;
+    background-color: #2d67c4;
     display: flex;
     align-items: center;
     padding: 5px 0;
@@ -77,11 +77,11 @@
     display: block;
     font-size: 18px;
     padding: 5px;
-    color: #e17055;
+    color: #2d67c4;
 }
 
 .section-nav-top__link:hover {
-    background-color: #fab1a0;
+    background-color: #3e78d5;
 }
 
 @media only screen and (max-width: 768px) {
@@ -97,7 +97,7 @@
         flex-direction: column;
         align-items: center;
         align-content: center;
-        background-color: #e17055;
+        background-color: #2d67c4;
     }
     .section-nav-top__flex-wrapper--collapsed {
         max-height: 0 !important;
