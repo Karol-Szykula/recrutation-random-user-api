@@ -6,7 +6,7 @@ export const loadDataAsyncAction = () => (dispatch, getState) => {
         .then(res => res.json())
         .then(users => {
             const usersArray = users.results
-            dispatch(fetchUsers({ type: FETCH_USERS, usersArray }))
+            dispatch(fetchUsers(usersArray))
         })
 }
 
@@ -16,7 +16,7 @@ const fetchUsers = (users) => ({
 })
 
 const INITIAL_STATE = {
-    users: null
+    users: []
 }
 
 export default (state = INITIAL_STATE, action) => {
