@@ -1,16 +1,22 @@
-import React, { Component } from 'react';
-import Navigation from './Navigation/Navigation';
-import List from './List/List';
+import React, { Component } from 'react'
+
+import { Provider } from 'react-redux'
+
+import { store } from './store'
+import Navigation from './Navigation/Navigation'
+import List from './List/List'
 
 class App extends Component {
   render() {
     return (
-      <div>
-        {/* <Navigation /> */}
+      <Provider
+        store={store}
+      >
+        <Navigation />
         <List />
-      </div>
-    );
+      </Provider>
+    )
   }
 }
 
-export default App;
+export default App

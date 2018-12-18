@@ -2,6 +2,12 @@
     margin-top: 95px;
 }
 
+.input-search {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+}
+
 @media only screen and (max-width: 768px) {
     .List-list {
         margin-top: 160px;
