@@ -10,16 +10,8 @@ class List extends React.Component {
     state = {
         searchText: '',
         defaultPageSize: 5,
-        currentPage: 1
+        currentPage: Number(this.props.match.params.id) - 1 || 0
     }
-
-    // componentDidMount() {
-    //     fetch(`https://randomuser.me/api/?results=${100}`)
-    //         .then(res => res.json())
-    //         .then(users => {
-    //             this.setState({ users: users.results })
-    //         })
-    // }
 
     searchInputTextChangeHandler = (event) => {
         this.setState({ searchText: event.target.value })
@@ -59,8 +51,10 @@ class List extends React.Component {
                         Header: 'Last Name',
                         accessor: 'name.last'
                     }]}
+                    showPageJump={false}
                     defaultPageSize={this.state.defaultPageSize}
-                    currentPage={this.state.currentPage}
+                    page={this.state.currentPage}
+                    onPageChange={(newPage) => { this.setState({ currentPage: newPage }) }}
                 />
             </div>
         )
@@ -71,11 +65,6 @@ const mapStateToProps = (state) => ({
     users: state.list.users
 })
 
-const mapDispatchToProps = (dispatch) => ({
-
-})
-
 export default connect(
     mapStateToProps,
-    mapDispatchToProps
 )(List)
