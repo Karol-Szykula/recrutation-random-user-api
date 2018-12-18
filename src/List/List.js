@@ -1,47 +1,41 @@
 import React from 'react'
 
+import ReactTable from 'react-table'
+import 'react-table/react-table.css'
 import './list.css'
 
 class List extends React.Component {
 
     state = {
-        usersData: []
+        users: []
     }
 
     componentDidMount() {
         fetch(`https://randomuser.me/api/?results=${20}`)
             .then(res => res.json())
-            .then(users => this.setState({ usersData: users }))
+            .then(users => {
+                console.dir(users.results)
+                this.setState({ users: users.results })
+            })
     }
 
     render() {
         return (
-            <div className='List-list'>
-                {
-                    this.state.usersData && this.state.usersData.results &&
-                        this.state.usersData.results.map
-                        ?
-                        this.state.usersData.results.map(user => {
-                            return (
-                                <div
-                                    key={user.login.uuid}
-                                >
-                                    <div>
-                                        {
-                                            `${user.name.title} ${user.name.first} ${user.name.last}`
-                                        }
-                                    </div>
-                                    <div>
-                                        <a href="mailto:{user.email}">{user.email}</a>
-                                    </div>
-                                    <hr />
-                                </div>
-                            )
-                        })
-                        :
-                        'Loading'
-                }
-            </div>
+            <ReactTable
+                data={this.state.users}
+                // resolveData={(data) => data.map((user) => (user))}
+                columns={[{
+                    Header: 'Title',
+                    accessor: 'name.title'
+                }, {
+                    Header: 'First Name',
+                    accessor: 'name.first'
+                }, {
+                    Header: 'Last Name',
+                    accessor: 'name.last'
+                }]}
+            />
+
         )
     }
 }
