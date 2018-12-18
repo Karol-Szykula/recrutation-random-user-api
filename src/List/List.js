@@ -15,7 +15,6 @@ class List extends React.Component {
         fetch(`https://randomuser.me/api/?results=${100}`)
             .then(res => res.json())
             .then(users => {
-                console.dir(users.results)
                 this.setState({ users: users.results })
             })
     }
@@ -25,6 +24,14 @@ class List extends React.Component {
     }
 
     render() {
+        let users = this.state.users
+        if (this.state.searchText) {
+            users = this.state.users.filter(user => {
+                console.log('cos')
+                return user.name.first.includes(this.state.searchText) || user.name.last.includes(this.state.searchText)
+            })
+        }
+
         return (
             <div className='List-list'>
                 <input
@@ -34,8 +41,7 @@ class List extends React.Component {
                 />
 
                 <ReactTable
-                    data={this.state.users}
-                    filterable={true}
+                    data={users}
                     columns={[{
                         Header: 'Title',
                         accessor: 'name.title'
