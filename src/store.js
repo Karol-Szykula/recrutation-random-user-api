@@ -1,7 +1,7 @@
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 
-import list from './state/list'
+import list, { loadDataAsyncAction } from './state/list'
 
 const reducer = combineReducers({
     list
@@ -15,3 +15,5 @@ export const store = createStore(
         applyMiddleware(thunk)
     )
 )
+
+store.dispatch(loadDataAsyncAction())

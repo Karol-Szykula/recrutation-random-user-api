@@ -1,7 +1,13 @@
 const FETCH_USERS = 'list/FETCH_USERS'
 
 export const loadDataAsyncAction = () => (dispatch, getState) => {
-    dispatch(fetchUsers())
+
+    fetch(`https://randomuser.me/api/?results=${100}`)
+        .then(res => res.json())
+        .then(users => {
+            const usersArray = users.results
+            dispatch(fetchUsers({ type: FETCH_USERS, usersArray }))
+        })
 }
 
 const fetchUsers = (users) => ({
@@ -14,7 +20,7 @@ const INITIAL_STATE = {
 }
 
 export default (state = INITIAL_STATE, action) => {
-    switch (action) {
+    switch (action.type) {
 
         case FETCH_USERS:
             return {

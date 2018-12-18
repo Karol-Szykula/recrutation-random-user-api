@@ -11,7 +11,7 @@ class List extends React.Component {
         users: [],
         searchText: '',
         defaultPageSize: 5,
-        currentPage: Number(this.props.match.params.id)
+        currentPage: 1
     }
 
     componentDidMount() {
@@ -72,6 +72,11 @@ const mapStateToProps = (state) => ({
 
 })
 
+const mapDispatchToProps = (dispatch) => ({
+
+})
+
 export default connect(
-    mapStateToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(List)
