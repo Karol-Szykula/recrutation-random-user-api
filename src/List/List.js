@@ -22,12 +22,6 @@ class List extends React.Component {
         if (typeof (this.props.match.params.id) == 'number') {
             console.log(this.props.match.params.id)
             this.setState({ currentPage: Number(this.props.match.params.id) - 1 })
-            // let pageNumberFromUrl = Number(this.props.match.params.id)
-            // let lastPageNumber = (this.props.users.length) / 5
-            // console.log(this.props.match.params.id)
-            // if (pageNumberFromUrl <= 0) this.setState({ currentPage: pageNumberFromUrl })
-            // else if (pageNumberFromUrl >= lastPageNumber) this.setState({ currentPage: lastPageNumber })
-            // else this.setState({ currentPage: Number(this.props.match.params.id) - 1 })
         }
     }
 
