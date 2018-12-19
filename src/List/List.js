@@ -39,6 +39,9 @@ class List extends React.Component {
                 </div>
 
                 <ReactTable
+                    showPaginationTop={true}
+                    showPaginationBottom={false}
+                    showPageSizeOptions={false}
                     className={'-striped'}
                     data={users}
                     columns={[{

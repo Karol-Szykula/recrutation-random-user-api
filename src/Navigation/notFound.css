@@ -1,0 +1,7 @@
+.not-found-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 100vh;
+}

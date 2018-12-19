@@ -2,7 +2,7 @@ const FETCH_USERS = 'list/FETCH_USERS'
 
 export const loadDataAsyncAction = () => (dispatch, getState) => {
 
-    fetch(`https://randomuser.me/api/?results=${100}`)
+    fetch(`https://randomuser.me/api/?results=${19}`)
         .then(res => res.json())
         .then(users => {
             const usersArray = users.results
