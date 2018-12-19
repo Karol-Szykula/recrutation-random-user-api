@@ -10,7 +10,25 @@ class List extends React.Component {
     state = {
         searchText: '',
         defaultPageSize: 5,
-        currentPage: Number(this.props.match.params.id) - 1 || 0
+        currentPage: 0,
+    }
+
+    componentDidMount() {
+        this.setPageNumberFromUrl()
+    }
+
+    setPageNumberFromUrl = () => {
+
+        if (typeof (this.props.match.params.id) == 'number') {
+            console.log(this.props.match.params.id)
+            this.setState({ currentPage: Number(this.props.match.params.id) - 1 })
+            // let pageNumberFromUrl = Number(this.props.match.params.id)
+            // let lastPageNumber = (this.props.users.length) / 5
+            // console.log(this.props.match.params.id)
+            // if (pageNumberFromUrl <= 0) this.setState({ currentPage: pageNumberFromUrl })
+            // else if (pageNumberFromUrl >= lastPageNumber) this.setState({ currentPage: lastPageNumber })
+            // else this.setState({ currentPage: Number(this.props.match.params.id) - 1 })
+        }
     }
 
     searchInputTextChangeHandler = (event) => {
@@ -26,6 +44,8 @@ class List extends React.Component {
         }
 
         return (
+
+
             <div className='List-list'>
                 <div
                     className={'input-search'}

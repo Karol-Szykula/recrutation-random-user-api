@@ -19,8 +19,8 @@ class App extends Component {
             <Route component={Navigation} />
             <Switch>
               <Route path='/' exact component={List} />
-              <Route path='/add' component={List} />
-              <Route exact component={NotFound} />
+              <Route path='/:id([1-4])' component={List} />
+              <Route component={NotFound} />
             </Switch>
           </div>
         </BrowserRouter>
