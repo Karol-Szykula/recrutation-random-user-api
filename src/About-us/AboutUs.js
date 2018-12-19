@@ -1,8 +1,10 @@
 import React from 'react'
 
+import './aboutus.css'
+
 const AboutUs = (props) => (
-    <div>
-        AboutUs
+    <div className='about-us'>
+        Our company offers:
     </div>
 )
 
