@@ -1,7 +1,48 @@
-.about-us {
+.about-us__wrapper {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: auto;
     height: 80vh;
 }
+
+.about-us {
+    display: flex;
+    flex-basis: 25%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: rgba(0,0,0,0.13);
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    border: 1px solid gainsboro;
+    text-align: center;
+    color: #1e272e;
+    font-weight: bold;
+    font-family: sans-serif;
+    width: 100%;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.about-us__item {
+    display: flex;
+    flex-basis: 25%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: whitesmoke;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    border: 1px solid gainsboro;
+    text-align: center;
+    color: #1e272e;
+    font-weight: bold;
+    font-family: sans-serif;
+    width: 100%;
+    box-shadow: 5px 5px 5px grey;
+}
+
+@media screen and (max-width: 768px) {}
