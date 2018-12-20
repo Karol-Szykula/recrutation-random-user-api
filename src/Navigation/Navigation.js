@@ -13,25 +13,20 @@ class Navigation extends React.Component {
         return (
             <div className="section-nav-top">
                 {this.renderTitle()}
-
-                <ul className="section-nav-top__flex-wrapper">
+                <div className="section-nav-top__flex-wrapper">
                     <Link
                         className="section-nav-top__item"
                         to='/list'
                     >
-                        <li className="section-nav-top__item">
-                            <div className="section-nav-top__link" >List</div>
-                        </li>
+                        <div className="section-nav-top__link" >List</div>
                     </Link>
                     <Link
                         className="section-nav-top__item"
                         to='/about-us'
                     >
-                        <li className="section-nav-top__item">
-                            <div className="section-nav-top__link" >About us</div>
-                        </li>
+                        <div className="section-nav-top__link" >About us</div>
                     </Link>
-                </ul>
+                </div>
             </div >
         )
     }
