@@ -1,9 +1,14 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
 import './title.css'
 import './navigation.css'
 
 class Navigation extends React.Component {
+    state = {
+        linkToAboutUs: false,
+        linkToList: false,
+    }
     render() {
         return (
             <div className="section-nav-top">
@@ -17,12 +22,22 @@ class Navigation extends React.Component {
                 </div>
 
                 <ul className="section-nav-top__flex-wrapper">
-                    <li className="section-nav-top__item">
-                        <div className="section-nav-top__link" >List</div>
-                    </li>
-                    <li className="section-nav-top__item">
-                        <div className="section-nav-top__link" >About us</div>
-                    </li>
+                    <Link
+                        className="section-nav-top__item"
+                        to='/list'
+                    >
+                        <li className="section-nav-top__item">
+                            <div className="section-nav-top__link" >List</div>
+                        </li>
+                    </Link>
+                    <Link
+                        className="section-nav-top__item"
+                        to='/about-us'
+                    >
+                        <li className="section-nav-top__item">
+                            <div className="section-nav-top__link" >About us</div>
+                        </li>
+                    </Link>
                 </ul>
             </div >
         )
@@ -31,7 +46,7 @@ class Navigation extends React.Component {
     renderTitle() {
         return (
             <div className="section-nav-top__title">
-                title
+                Recrutation task - RandomUserApi
             </div>
         )
     }

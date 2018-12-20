@@ -44,6 +44,7 @@
     display: flex;
     align-items: center;
     padding: 5px 0;
+    text-decoration: none;
 }
 
 .section-nav-top__link {
