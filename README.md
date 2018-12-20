@@ -1,5 +1,5 @@
 This is a recrutation task 1.  
-Can be viewed on [recrutation-task-one.karol-szykula.surge.sh](recrutation-task-one.karol-szykula.surge.sh)
+Can be viewed on [http://recrutation-task-one.karol-szykula.surge.sh](http://recrutation-task-one.karol-szykula.surge.sh)
 
 ## Available Scripts
 
