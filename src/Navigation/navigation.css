@@ -22,7 +22,7 @@
 
 .section-nav-top__item {
     flex-grow: 1;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     padding: 5px 0;
@@ -54,14 +54,13 @@
 }
 
 .section-nav-top__link:hover {
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 @media only screen and (max-width: 768px) {
     .section-nav-top__flex-wrapper {
         flex-direction: column;
     }
-    
     .section-nav-top__item {
         padding: 0 5px;
     }

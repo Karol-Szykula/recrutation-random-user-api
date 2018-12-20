@@ -18,7 +18,7 @@ class Navigation extends React.Component {
                         className="section-nav-top__item"
                         to='/list'
                     >
-                        <div className="section-nav-top__link" >List</div>
+                        <div className="section-nav-top__link">List</div>
                     </Link>
                     <Link
                         className="section-nav-top__item"
