@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a recrutation task 1.  
+Can be viewed on [recrutation-task-one.karol-szykula.surge.sh](recrutation-task-one.karol-szykula.surge.sh)
 
 ## Available Scripts
 
