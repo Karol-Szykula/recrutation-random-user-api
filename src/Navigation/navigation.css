@@ -22,7 +22,7 @@
 
 .section-nav-top__item {
     flex-grow: 1;
-    background-color: #2d67c4;
+    background-color: rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
     padding: 5px 0;
@@ -54,20 +54,12 @@
 }
 
 .section-nav-top__link:hover {
-    background-color: #3e78d5;
+    background-color: rgba(0,0,0,0.3);
 }
 
 @media only screen and (max-width: 768px) {
     .section-nav-top__flex-wrapper {
         flex-direction: column;
-    }
-
-    .section-nav-top__toggle {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        background-color: #2d67c4;
     }
     
     .section-nav-top__item {
