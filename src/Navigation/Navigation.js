@@ -13,13 +13,6 @@ class Navigation extends React.Component {
         return (
             <div className="section-nav-top">
                 {this.renderTitle()}
-                <div className="section-nav-top__toggle">
-                    <div className="section-nav-top__toggle-link" >
-                        <div className="section-nav-top__toggle-button"></div>
-                        <div className="section-nav-top__toggle-button"></div>
-                        <div className="section-nav-top__toggle-button"></div>
-                    </div>
-                </div>
 
                 <ul className="section-nav-top__flex-wrapper">
                     <Link
